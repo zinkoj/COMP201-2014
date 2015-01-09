@@ -1,0 +1,6 @@
+= COMP201
+
+== Week 1
+
+* https://github.com/lawrancej/COMP201-2014/blob/master/lectures/lecture2.adoc[Lecture 2: Software setup]
+* https://github.com/lawrancej/COMP201-2014/blob/master/lectures/lecture1.adoc[Lecture 1: Ice-breaker introduction and syllabus]

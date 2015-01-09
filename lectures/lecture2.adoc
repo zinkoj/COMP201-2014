@@ -1,0 +1,100 @@
+= Lab 1: Software Setup and Pretest
+
+== Install Git and frontends
+[[install-git]]
+Windows:: http://sourceforge.net/projects/gitextensions/[Install Git Extensions]
++
+NOTE: Install MsysGit, Install KDiff, and *choose OpenSSH* (not PuTTY); otherwise,
+stick to the default settings.
++
+image:http://lawrancej.github.io/COMP310-2014/images/what2install.png[Install MsysGit and KDiff]
+image:http://lawrancej.github.io/COMP310-2014/images/openssh.png[Choose OpenSSH]
+
+Mac OS X:: http://rowanj.github.io/gitx/[Install GitX-dev].
++
+NOTE: https://developer.apple.com/xcode/downloads/[XCode developer tools] ships with git; otherwise, http://git-scm.com/download/mac[install the latest git from here].
+
+Linux:: http://git-scm.com/download/linux[Install git] using your package manager. http://sourceforge.net/projects/qgit/[QGit, a git frontend] may also be available for your distribution.
++
+NOTE: Don't forget to use +sudo+ with your package manager.
+
+== Setup your course repository
+[[setup-repo]]
+IMPORTANT: You must use LeopardSecure, not LeopardGuest.
+
+All platforms:: Paste this into your terminal (Git Bash on Windows):
++
+----
+cd ~
+curl https://raw.githubusercontent.com/lawrancej/COMP201-2014/master/starter-upper.sh | bash
+----
++
+NOTE: Press +Insert+ to paste in Git Bash.
+
+== Install g++
+
+Chances are good that you already have a C++ development environment installed
+(e.g., Visual Studio, XCode). Chances are not so good that you have any decent 
+(i.e., non-standard) libraries installed.
+
+On your own time (outside class), please download and install g++ for your platform.
+
+Windows:: http://win-builds.org/download.html[Download and Run the Package Manager]. Click *Process* to install.
+Mac:: Install XCode through the App Store.
+Linux:: Install g++ using your package manager.
+
+== Pretest / Git practice
+
+IMPORTANT: If you use Windows, first download and install
+http://notepad-plus-plus.org/download/v6.6.9.html[a proper text editor]
+(Notepad, Word and WordPad do not count). 
+
+In Git Bash (Start (Windows Key) -> Git Bash):
+
+----
+cd ~/COMP201-2014                # Go into your folder
+start .                          # Open folder in Explorer (Windows)
+----
+
+NOTE: On Mac, replace `start .` with `open .` On Linux, use `xdg-open .` instead.
+
+Create a new text file in your COMP201-2014 folder called `fizzbuzz.cpp`.
+
+----
+touch fizzbuzz.cpp
+----
+
+In that file:
+
+> Write a small program that counts from 1 to 100. However, if the number is 
+divisible by 3, instead print "Fizz". If the number is divisible by 5, print
+"Buzz" instead. If the number is divisible by both 3 and 5, print "FizzBuzz".
+
+If you have g++ installed, you can test it out on your machine:
+
+----
+g++ fizzbuzz.cpp -o fizzbuzz.exe # Compile the program
+fizzbuzz.exe                     # Test the program
+----
+
+Otherwise, try your code out in http://ideone.com/[IDE One]. Select
+C++14 in the list of languages and paste in your code to test it out.
+
+Next, stage, commit and push our stuff off to ensure that `git` is working. You
+can also use Git Extensions (or GitX or QGit) to do this.
+
+----
+git add fizzbuzz.cpp             # Stage fizzbuzz.cpp (include in next commit)
+git commit -m "Git practice"     # Commit changes with a message
+git push origin master           # Send work to your private repository
+----
+
+== References
+
+* http://www.atlassian.com/git/[Atlassian Git Tutorials]
+* http://git-scm.com/book[Pro Git]
+* http://gitref.org/[Git Reference]
+* http://gitimmersion.com/[Git Immersion]
+* http://try.github.com/[Try Git]
+* http://pcottle.github.io/learnGitBranching/?demo[Git Branching]
+* http://rogerdudler.github.io/git-guide/[git - the simple guide]
