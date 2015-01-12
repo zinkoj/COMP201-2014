@@ -1,5 +1,9 @@
 = COMP201
 
+== Week 2
+
+* https://github.com/lawrancej/COMP201-2014/blob/master/lectures/lecture3.adoc[Lecture 3: COMP120/128 Review?]
+
 == Week 1
 
 * https://github.com/lawrancej/COMP201-2014/blob/master/lectures/lecture2.adoc[Lecture 2: Software setup]
