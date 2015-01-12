@@ -103,8 +103,8 @@ Nifty!
 
 == Strings
 
-C++ has two kinds of strings: C-style strings (`char*`) and C++-style strings
+`C++` has two kinds of strings: C-style strings (`char*`) and `C++`-style strings
 (`string`).
 
-Let's try them out to solve some small problem.
+Let's try them out to solve some small problem; reversing a string.
 
