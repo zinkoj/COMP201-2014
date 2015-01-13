@@ -1,0 +1,56 @@
+= Lab 1
+
+This lab reviews concepts in COMP128 (loops, files, I/O). It should be reasonably
+easy.
+
+== Preface
+
+1. Copy the zip file on the USB stick to your Desktop.
+2. Extract it to your Desktop (it will create a folder called `1.5-rc3`).
+3. Go into that folder.
+4. Click on the address bar. Copy the path (Ctrl-C)
+5. http://win-builds.org/download.html[Download and Run the Package Manager].
+6. Select the system to install for: *Native Windows*
+7. Select the architecture to install for: *x86_64*
+8. Paste the path to *Provide the mirror* (Ctrl-V)
+9. Chose where to install (Click browse, under your desktop, create a folder called
+`winbuilds`). *REMEMBER THIS FOLDER* (Copy it to your clipboard)
+10. Click OK.
+11. Click *Process* to install.
+12. Once it's done, you may need to add the installation path to your
+system path. Start -> environment variables -> edit the system environment variables.
+13. Click *Environment variables...*
+14. Under System variables, scroll down to Path and double-click it.
+15. *BE CAREFUL.* Add the folder where you installed windbuilds, but don't wipe it out. (It's semicolon-delimited) It's always okay to click cancel
+
+
+NOTE: if you get the following error from GCC when opening a file:
+`error: no matching function for call to 'std::basic_ifstream<char>::open(std::string &)'`
+Remember to provide a C string to the open function, using the `c_str` function
+in the string class.
+
+== Part 1
+
+Write a program that gets file name from the command line (`argv[1]`) and then
+creates a three-column table (each column separated by a tab (`\t`)), populated
+based upon the integers found in the file. For each integer in the file, the
+first column will be the integer, the second will be the integer squared, and
+the third column is to show a running sum of the integers in the file.
+
+For example, if the file had only the numbers `1, 2, 3, 0, -1`, then the
+resulting output to the screen would be:
+
+----
+x x^2 Current Sum
+= === ===========
+1  1   1
+2  4   3
+3  9   6
+0  0   6
+-1 1   5
+----
+
+== Part 2
+
+Modify Part 1 such that the output writes to a file called `output.txt`
+instead of displaying it to the screen.
