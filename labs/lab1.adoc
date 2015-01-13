@@ -1,34 +1,49 @@
 = Lab 1
 
 This lab reviews concepts in COMP128 (loops, files, I/O). It should be reasonably
-easy.
+easy? If it isn't, please don't hesitate to let me know. I want all of us to
+succeed.
 
 == Deadline
 January 20
 
 == Preface
 
-1. Copy the zip file on the USB stick to your Desktop.
-2. Extract it to your Desktop (it will create a folder called `1.5-rc3`).
-3. Go into that folder.
-4. Click on the address bar. Copy the path (Ctrl-C)
-5. http://win-builds.org/download.html[Download and Run the Package Manager].
-6. Select the system to install for: *Native Windows*
-7. Select the architecture to install for: *x86_64*
-8. Wouldn't it be nice if we could paste? Haha. That'd be too easy.
-Instead, paste your folder into notepad/notepad++. It'll need to be a file URL.
-So: No spaces in your folders. Flip those backslashes around, because reasons.
-And... preface the path with file:///
-Type that path into *Provide the mirror*
-9. Chose where to install (Click browse, under your desktop, create a folder called
-`winbuilds`). *REMEMBER THIS FOLDER* (Copy it to your clipboard)
-10. Click OK.
-11. Click *Process* to install.
-12. Once it's done, you may need to add the installation path to your
-system path. Start -> environment variables -> edit the system environment variables.
+1. Copy the `1.5-rc3.zip` file on the USB stick to your Desktop.
+2. Extract the zip file to your Desktop (it will create a folder called `1.5-rc3`).
+3. Go into that folder, and keep diving in until you see a folder called `packages`. Keep going.
+Go into `windows_64`. Scroll down to `index.html`. Double click to open that up
+in your web browser.
+4. http://win-builds.org/download.html[Download and Run the Package Manager].
+5. Select the system to install for: *Native Windows*
+6. Select the architecture to install for: *x86_64*
+7. Chose where to install (Click browse, under your Desktop, create a new folder
+called `winbuilds`).
+8. Click OK.
+9. On the next page, it'll take it's sweet time to download package information.
+Since their server appears to be on dial-up, click *Change Mirror*
+10. Remember how we opened up a folder in the web browser? Wouldn't it be nice
+if we could copy/paste? Haha. That'd be too easy.
+So, carefully copy paste by typing the address in your browser (it'll end with:
+`1.5-rc3/packages/windows_64/` ) *Exclude* `index.html` from the mirror.
+11. Click OK. If things work, the dialog will go away.
+12. Click *Process* to install.
+13. Once it's done, you may need to add the installation path to your
+system path, because they hate us. Go to Start -> environment variables -> edit
+the system environment variables.
 13. Click *Environment variables...*
-14. Under System variables, scroll down to Path and double-click it.
-15. *BE CAREFUL.* Add the folder where you installed windbuilds, but don't wipe it out. (It's semicolon-delimited) It's always okay to click cancel
+14. Under *User variables* (not System variables), scroll down to *PATH* and
+double-click to edit it. *PATH* not there? Click `New...`
+15. *BE CAREFUL.* Add the folder where you installed windbuilds, but don't wipe
+it out. (It's semicolon-delimited) It's always okay to click cancel.
+16. Click OK until dialogs go away. Log out and log in again.
+17. Open Git Bash. Try g++ now.
+
+NOTE: If you get a *cc1plus.exe Entry Point Not Found* error when compiling, read
+the error message carefully. It is likely looking for a .dll file in the wrong
+place. Welcome to DLL hell. In Git Bash, type in `which` dll-file-goes-here`.dll`
+If it's not in your `winbuilds` folder, you will need to remove that other path from the system or
+user path.
 
 NOTE: if you get the following error from GCC when opening a file:
 `error: no matching function for call to 'std::basic_ifstream<char>::open(std::string &)'`
