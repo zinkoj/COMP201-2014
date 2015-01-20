@@ -65,6 +65,19 @@ int main() {
 }
 ----
 
+== Example input
+
+Given this:
+
+----
+5 3 - 4 8 * + .
+----
+
+Your program should print out `34`, because
+`5 - 3` is `2` and `4 * 8` is `32` and when you add them together
+we get `34`. The `.` at the end should print out the contents
+of the stack (vector).
+
 == How to submit
 
 Place your code in a file called `lab2.cpp`.
