@@ -1,6 +1,10 @@
 // Defining your own types
 #include <iostream>
 #include <vector>
+// Silly randomness
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
 
 using namespace std;
 
