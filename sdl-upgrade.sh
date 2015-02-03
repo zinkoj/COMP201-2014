@@ -10,16 +10,18 @@ extensions::extract() {
     tar -xzvf SDL2_mixer-devel-2.0.0-mingw.tar.gz
     tar -xzvf SDL2_ttf-devel-2.0.12-mingw.tar.gz
     tar -xzvf SDL2_net-devel-2.0.0-mingw.tar.gz
-    rm -rf SDL2_*-mingw.tar.gz
 }
 extensions::install() {
     local dest="$(which gcc)"
     dest="${dest%/bin/gcc}"
-    find SDL2* | grep x86_64 | grep mingw32$ | while read library; do
+    find SDL2* | grep 686 | grep mingw32$ | while read library; do
         pushd $library
         cp -R bin/ include/ lib/ $dest
         popd
     done
+}
+extensions::clean() {
+    rm -rf SDL2_*-mingw.tar.gz
     rm -rf SDL2_*-2.0.*
 }
 main() {
@@ -27,5 +29,6 @@ main() {
     extensions::download
     extensions::extract
     extensions::install
+    extensions::clean
 }
 main
