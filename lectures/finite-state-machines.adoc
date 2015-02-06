@@ -11,13 +11,6 @@ only be in one state at a time (Non-deterministic finite state machines can be
 in several states simultaneously; but since http://en.wikipedia.org/wiki/Powerset_construction[they're equivalent to deterministic finite state machines],
 we ignore them in this discussion).
 
-== Diagrams
-
-Typically, we draw finite state machines using state-transition diagrams.
-In diagrams, states are labelled nodes (circles), and transitions are edges (arrows) labelled by the triggering input and actions.
-An unlabeled arrow from nowhere to a state designates the start state.
-Nodes depicted with two concentric circles are final (or accepting) states.
-
 == Examples
 
 Finite state machines are everywhere if you know where to look.
@@ -27,6 +20,13 @@ States of matter include: solid, liquid, gas, and plasma; transitions have fancy
 In computing, finite state machines describe how CPUs, compilers, regular expressions, and operating systems work.
 Thinking about yourself for a moment: what are the states and transitions in your day or your life?
 Care to draw a diagram?
+
+== Diagrams
+
+Typically, we draw finite state machines using state-transition diagrams.
+In diagrams, states are labelled nodes (circles), and transitions are edges (arrows) labelled by the triggering input and actions.
+An unlabeled arrow from nowhere to a state designates the start state.
+Nodes depicted with two concentric circles are final (or accepting) states.
 
 == Converting to code
 
